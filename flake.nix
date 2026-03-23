@@ -1,15 +1,19 @@
 {
   description = "Joinix";
 
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+  };
+
   outputs = {...}: {
     nixosModules.default = {
       imports = [
-        ./joinix.nix
+        ./join.nix
       ];
     };
     homeModules.default = {
       imports = [
-        ./joinix.nix
+        ./join.nix
       ];
     };
   };
