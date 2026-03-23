@@ -6,15 +6,7 @@
   };
 
   outputs = {...}: {
-    nixosModules.default = {
-      imports = [
-        ./join.nix
-      ];
-    };
-    homeModules.default = {
-      imports = [
-        ./join.nix
-      ];
-    };
+    nixosModules.default = import ./join.nix;
+    homeModules.default = import ./join.nix;
   };
 }
